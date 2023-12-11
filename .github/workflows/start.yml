@@ -1,4 +1,4 @@
-name: Create Files
+name: Run My Bash Script
 
 on:
   push:
@@ -6,16 +6,18 @@ on:
       - main
 
 jobs:
-  create-files:
+  run-script:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Create files
+      - name: Run My Bash Script
         run: |
-          echo "This is the content of file2.txt" > file2.txt
+          chmod +x mysh.sh
+          ./mysh.sh
+
 
       - name: Commit changes
         run: |
