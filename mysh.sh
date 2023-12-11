@@ -3,6 +3,8 @@
 # Create main project directory
 mkdir TaskHub
 cd TaskHub
+sudo apt update
+sudo apt install nodejs npm
 
 # Create and activate virtual environment
 python3 -m venv venv
